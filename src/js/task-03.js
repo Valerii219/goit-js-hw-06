@@ -12,3 +12,8 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const gallaryEl = document.querySelector("gallery");
+
+const imgCreateEl = images.map((image) => `<img  >${image}</img>`).join("");
+console.log(imgCreateEl)
