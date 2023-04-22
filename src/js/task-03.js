@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-const gallaryEl = document.querySelector("gallery");
+const gallaryEl = document.querySelector('gallery');
 
-const imgCreateEl = images.map((image) => `<img  >${image}</img>`).join("");
-console.log(imgCreateEl)
+const imgCreateEl = images.map(image => `<img  >${image}</img>`).join('');
+console.log(imgCreateEl);
