@@ -13,7 +13,16 @@ const images = [
   },
 ];
 
-const gallaryEl = document.querySelector('gallery');
+const gallaryEl = document.querySelector('.gallery');
 
-const imgCreateEl = images.map(image => `<img  >${image}</img>`).join('');
-console.log(imgCreateEl);
+const createImage = images.map((image) =>
+`<li class= "item-gallery">
+<img class ='img-gallery'
+src = ${image.url}
+alt =${image.alt}>
+</li>`
+).join('');
+
+
+gallaryEl.insertAdjacentHTML("afterbegin", createImage)
+console.log(createImage)
