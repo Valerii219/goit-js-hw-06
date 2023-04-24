@@ -3,23 +3,28 @@ let counterValue = 0;
  const incrementEl = document.querySelector('[data-action="increment"]')
  const valueCounter =  document.querySelector('#value')
 
+const counter = {
+value: 0,
+increment() {
+console.log('increment -> this', this);
+this.value += 1;
+},
+decrement() {
+console.log('decrement -> this', this);
+this.value -= 1;
 
-incrementEl.addEventListener("click", () => {
-counterValue++;
-    valueCounter.textContent = counterValue;
-}
+} }
 
- )
+decrementEl.addEventListener('click', function (){
+counter.decrement();
+valueCounter.textContent = counter.value;
+} )
 
 
-decrementEl.addEventListener("click", () => {
-    counterValue--;
-    valueCounter.textContent = counterValue;
-    } )
 
-const CounterPlugin = function({inValue = 0, step = 1} = {}){
-    this.value = inValue;
-    this.step = step;
-}
+incrementEl.addEventListener('click', function (){
+counter.increment();
+valueCounter.textContent = counter.value
+})
+console.log(counter.value);
 
-const counter = new CounterPlugin({step: 1});
