@@ -12,5 +12,6 @@ function onInputChange(event) {
     else{
     event.currentTarget;
         refs.spanEl.textContent = event.currentTarget.value}
+        
 }
 
