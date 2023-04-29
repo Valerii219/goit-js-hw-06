@@ -20,8 +20,6 @@ counter.decrement();
 valueCounter.textContent = counter.value;
 } )
 
-
-
 incrementEl.addEventListener('click', function (){
 counter.increment();
 valueCounter.textContent = counter.value

@@ -7,10 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 
-
-
 const ingredientEl = document.querySelector(`#ingredients`);
-
 
 const addOptionToIngredient = ingredients => {
 return ingredients.map ( ingredient => {  
